@@ -11,8 +11,9 @@
 </head>
     <body>
     <h1>Editar Tarefas</h1>
+        <c:set var="taskId" value="${param.taskId}"></c:set>
     <form action="../taskEditor" method="post">
-        <input type="hidden" name="taskId" value="${task.taskId}">
+        <input type="hidden" name="taskId" value="${taskId}">
         <label for="title">Título da Tarefa: </label>
         <input type="text" name="title" value="${task.title}" required>
         <br>

@@ -55,7 +55,7 @@ public class TaskEditor extends HttpServlet {
                 rep.editTask(task);
 
                 // Atualiza a lista após a edição
-                List<Task> listaAtualizada = rep.listar(task.getUser_id().getId());
+                List<Task> listaAtualizada = rep.listar(task.getTaskId());
 
                 request.setAttribute("lista", listaAtualizada);
 
