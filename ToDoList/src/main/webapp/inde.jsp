@@ -24,12 +24,12 @@
 	<div class="logo">
 			<i class="bi bi-list-check"></i>
 		</div>
-	<h2>Login de Usu·rio</h2>
+	<h2>Login de Usu√°rio</h2>
 	<form action="./authControl" method="post" class="form">
 		<c:if test="${not empty erroLogin}">
         <p class="error">${erroLogin}</p>
     </c:if>
-		<label for="username">Nome de Usu·rio: </label>
+		<label for="username">Nome de Usu√°rio: </label>
 		<input type="text" name="username">
 		<br>
 		<label for="password">Senha: </label>
