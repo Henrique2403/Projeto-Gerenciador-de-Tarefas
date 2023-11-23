@@ -5,12 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Listar Tarefas</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
 </head>
 <body>
+    <div class="circle"></div>
+	<div class="tabela">
 <jsp:include page="../listTasks"></jsp:include>
-    <h1>Listar Tarefas</h1>
+    <h2>Listar Tarefas</h2>
     <c:if test="${not empty lista}">
-    <table border="1">
+    <table>
         <thead>
             <tr>
                 <th>Título</th>
@@ -38,5 +49,6 @@
         <button type="button">Voltar</button>
     </a>
     </c:if>
+    </div>
 </body>
 </html>

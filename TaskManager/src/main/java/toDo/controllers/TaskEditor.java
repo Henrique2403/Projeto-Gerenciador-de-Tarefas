@@ -60,8 +60,7 @@ public class TaskEditor extends HttpServlet {
                 request.setAttribute("lista", listaAtualizada);
 
                 // Redireciona para a página de listagem
-                RequestDispatcher dispatcher = request.getRequestDispatcher("form/listTask.jsp");
-                dispatcher.forward(request, response);
+                response.sendRedirect("form/listTask.jsp");
             } else {
                 System.out.println("Parâmetro taskId ausente ou vazio.");
                 response.sendRedirect("form/listTask.jsp");

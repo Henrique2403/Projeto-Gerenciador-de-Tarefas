@@ -8,10 +8,24 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Task Manager</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
 </head>
 <body>
-	<h1>Adicionar Tarefas</h1>
-	<form action="../addTask" method="post">
+	<div class="circle"></div>
+	<div class="card">
+	<div class="logo">
+			<i class="bi bi-list-check"></i>
+		</div>
+	<h2>Adicionar Tarefas</h2>
+	<form action="../addTask" method="post" class="form">
 	<c:if test="${not empty erroAddTask}">
         <p class="error">${erroAddTask}</p>
     </c:if>
@@ -27,10 +41,13 @@
 		<br>
 		<button type="submit">Adicionar Tarefa</button>
 		<br>
-		<a href="../hub.jsp">
-		<button type="button">Voltar</button>
-		</a>
 	</form>
+	<footer style="text-align: center;">
+		<a href="../hub.jsp">
+		<button type="submit">Voltar</button>
+		</a>
+		</footer>
+	</div>
 
 </body>
 </html>

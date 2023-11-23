@@ -52,7 +52,7 @@ public class AuthenticateControl extends HttpServlet{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null; // Em caso de erro ou autenticação malsucedida.
+        return null; // Em caso de erro ou autenticação malsucedida
     }
 
 	/**
@@ -70,7 +70,7 @@ public class AuthenticateControl extends HttpServlet{
 	        response.sendRedirect("hub.jsp");
 	    } else {
 	        request.setAttribute("erroLogin", "Nome ou senha incorretos");
-	        request.getRequestDispatcher("/index.jsp").forward(request, response);
+	        request.getRequestDispatcher("index.jsp").forward(request, response);
 	    }
 	}
 
