@@ -32,8 +32,8 @@ public class UserController extends HttpServlet {
 		UserRepository rep = new UserRepository();
 		User user = new User();
 		user.setNome(request.getParameter("username"));
-		user.setPassword(request.getParameter("password"));
 		user.setEmail(request.getParameter("email"));
+		user.setPassword(request.getParameter("password"));
 		
         rep.registerUser(user);
         response.sendRedirect("./index.jsp");

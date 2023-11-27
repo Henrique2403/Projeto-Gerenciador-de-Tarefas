@@ -202,6 +202,9 @@ body{
     border-radius: 1.25rem;
     background: #fff;
     box-shadow: 0 100px 100px rgb(0 0 0 / 10%);
+    width: 100%; /* Use a largura desejada, pode ser em pixels, porcentagem, etc. */
+    height: 100%; /* Use a altura desejada, pode ser em pixels, porcentagem, etc. */
+
 }
 
 .tabela h2 {

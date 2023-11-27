@@ -85,6 +85,23 @@ public class TaskRepository extends Repository{
 
         return lista;
     }
+	
+	public void removeTask(Task task){
+		sql = "DELETE FROM tasks WHERE task_id = ?";
+	    try (Connection connection = conexao.conectar()) {
+	        ps = connection.prepareStatement(sql);
+	        ps.setInt(1, task.getTaskId());
+
+	        int rowsAffected = ps.executeUpdate();
+	        if (rowsAffected > 0) {
+	            System.out.println("Tarefa removida com sucesso!");
+	        } else {
+	            System.out.println("Nenhuma tarefa encontrada para remoção com ID: " + task.getTaskId());
+	        }
+	    } catch (SQLException e) {
+	        System.out.println("Erro ao remover tarefa\n" + e);
+	    }
+	}
 }
 
 

@@ -3,7 +3,6 @@ package toDo.controllers;
 import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import toDo.repository.TaskRepository;
 import toDo.task.Task;
-import toDo.user.User;
 
 /**
  * Servlet implementation class ListTasksServlet

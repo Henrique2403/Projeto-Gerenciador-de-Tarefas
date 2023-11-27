@@ -12,8 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-
 </head>
 <body>
     <div class="circle"></div>
@@ -28,7 +26,6 @@
                 <th>Descrição</th>
                 <th>Data de Vencimento</th>
                 <th>Status</th>
-                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -41,14 +38,17 @@
                     <td>
                         <a href="editTask.jsp?taskId=${task.taskId}">Editar</a>
                     </td>
+                    <td>
+						<a href="../removeTasks?taskId=${task.taskId}">Remover</a>
+                    </td>
                 </tr>
             </c:forEach>
         </tbody>
     </table>
+    </c:if>
     <a href="../hub.jsp">
         <button type="button">Voltar</button>
     </a>
-    </c:if>
     </div>
 </body>
 </html>
