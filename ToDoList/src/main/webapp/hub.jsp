@@ -18,20 +18,40 @@
 <body>
 
 	<div class="circle"></div>
-	<div class="card">
-		<div class="logo">
-			<i class="bi bi-list-check"></i>
-		</div>
-		<h2 style="text-align: center;"	>Gerenciador de Tarefas</h2>
-		<div class="card2">
-			<a href="form/addTask.jsp">
-				<button type="submit">Nova Tarefa</button>
-			</a>
-			<a href="form/listTask.jsp">
-				<button type="submit">Ver tarefas</button>
-			</a>
-		</div>
-	</div>
-
+	<div class="tabela">
+<jsp:include page="./listTasks"></jsp:include>
+    <h2>Listar Tarefas</h2>
+    <c:if test="${not empty lista}">
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Data de Vencimento</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <c:forEach var="task" items="${lista}">
+                <tr>
+                    <td>${task.title}</td>
+                    <td>${task.description}</td>
+                    <td>${task.dueDate}</td>
+                    <td>${task.completedString}</td>
+                    <td>
+                        <a href="form/editTask.jsp?taskId=${task.taskId}">Editar</a>
+                    </td>
+                    <td>
+			<a href="./removeTasks?taskId=${task.taskId}">Remover</a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
+    </c:if>
+    <a href="form/addTask.jsp">
+	<button type="submit">Nova Tarefa</button>
+    </a>
+    </div>
 </body>
 </html>
